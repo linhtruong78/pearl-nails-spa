@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #7EC850;
+  --color-primary-dark: #5fa832;
+  --color-surface: #F9F9F9;
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1A1A1A;
+  background: #FFFFFF;
+}
