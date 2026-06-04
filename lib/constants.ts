@@ -16,38 +16,126 @@ export const BUSINESS = {
 
 export const HOURS = [
   { days: 'Monday – Friday', time: '10:00 AM – 7:00 PM' },
-  { days: 'Saturday', time: '10:00 AM – 6:00 PM' },
+  { days: 'Saturday & Holidays', time: '10:00 AM – 6:00 PM' },
   { days: 'Sunday', time: '10:00 AM – 5:00 PM' },
 ]
 
+// Overview cards shown in the Services section
 export const SERVICES = [
   {
-    id: 'manicure',
-    name: 'Manicure',
+    id: 'nails',
+    name: 'Nail Services',
     description:
-      'Classic and gel manicures with a flawless finish. Nail shaping, cuticle care, and your choice of colour.',
-    price: 'From $35',
+      'Bio Gel, Sculpture, Solar, Acrylic, Dipping Powder, Ombre & Shellac sets — new sets and fills available.',
+    price: 'From $33',
   },
   {
-    id: 'pedicure',
-    name: 'Pedicure',
+    id: 'spa',
+    name: 'Spa Manicure & Pedicure',
     description:
-      'Relaxing pedicure treatments to soften, nourish, and beautify your feet from heel to toe.',
-    price: 'From $45',
+      'Relaxing spa manicures and pedicures including French, Shellac, and Herbal Spa treatments.',
+    price: 'From $25',
   },
   {
     id: 'nail-art',
-    name: 'Nail Art',
+    name: 'Nail Art & Design',
     description:
-      'Custom nail art designs — from subtle accents to intricate full-hand artwork tailored to you.',
-    price: 'From $15',
+      'Custom nail art, chrome powder, colour change, and eyelash extensions for a flawless finishing touch.',
+    price: 'From $8',
   },
   {
     id: 'waxing',
     name: 'Waxing',
     description:
-      'Smooth, long-lasting hair removal for brows, lip, underarm, and body.',
-    price: 'From $12',
+      'Full waxing menu — brows, lip, face, arms, legs, bikini, Brazilian, and Paraffin Wax treatments.',
+    price: 'From $10',
+  },
+]
+
+// Full price list sourced from salon menu
+export const PRICE_LIST = [
+  {
+    category: 'Nail Services',
+    items: [
+      { name: 'Clear Bio Gel New Set', price: '$75' },
+      { name: 'Clear Bio Gel Nails Fill', price: '$40' },
+      { name: 'Bio Gel Nails Fill White Tip', price: '$60' },
+      { name: 'Clear Sculpture Nails New Set', price: '$75' },
+      { name: 'Clear Gel Nails New Set', price: '$60' },
+      { name: 'Clear Gel Nails Fill', price: '$35' },
+      { name: 'Gel Nails Fill White Tip', price: '$55' },
+      { name: 'Clear Solar Nails New Set', price: '$55' },
+      { name: 'Clear Solar Nails Fill', price: '$35' },
+      { name: 'Solar Nails Fill White Tip', price: '$35' },
+      { name: 'Solar Nails New Set', price: '$75' },
+      { name: 'Ombre Nails Fill', price: '$55' },
+      { name: 'Ombre Nails New Set', price: '$55' },
+      { name: 'Clear Acrylic Nails New Set', price: '$53' },
+      { name: 'Clear Acrylic Nails Fill', price: '$33' },
+      { name: 'Acrylic Fill White Tip', price: '$55' },
+      { name: 'Dipping Powder', price: '$10 & up' },
+      { name: 'Nails Repair', price: '$50' },
+      { name: 'Manicure Shellac Ombre', price: '$20 & up' },
+      { name: 'Artificial Nails Take Off', price: '$15' },
+      { name: 'Shellac Take Off', price: '$15' },
+    ],
+  },
+  {
+    category: 'Spa Services',
+    items: [
+      { name: 'Spa Pedicure French Shellac', price: '$60' },
+      { name: 'Manicure French Shellac', price: '$45' },
+      { name: 'Manicure Shellac', price: '$40' },
+      { name: 'Spa Pedicure & Manicure', price: '$55' },
+      { name: 'Spa Pedicure', price: '$40' },
+      { name: 'Spa Manicure', price: '$25' },
+      { name: 'Spa Pedicure French', price: '$50' },
+      { name: 'Spa Manicure French', price: '$35' },
+      { name: 'Herbal Spa Pedicure', price: '$55' },
+      { name: 'Ingrown Nails Removal', price: '$10' },
+      { name: 'Spa Pedicure Shellac', price: '$55' },
+    ],
+  },
+  {
+    category: 'Nail Art & Design',
+    items: [
+      { name: 'Shellac Color Only', price: '$35' },
+      { name: 'Shellac French / Color Only', price: '$30' },
+      { name: 'Shellac Color Change / French', price: '$40' },
+      { name: 'Shellac Color Change', price: '$20' },
+      { name: 'Regular Color Change', price: '$10 & up' },
+      { name: 'Chrome', price: '$15 & up' },
+      { name: 'Nails Cut & Shape', price: '$8' },
+      { name: 'Nails Art Design', price: '$95' },
+      { name: 'Eyelash New Set', price: '$75' },
+      { name: 'Eyelash Fill', price: '$30' },
+      { name: 'Eyelash Take Off', price: '$15' },
+    ],
+  },
+  {
+    category: 'Waxing',
+    items: [
+      { name: 'Eyebrow', price: '$15' },
+      { name: 'Eyebrow Tinting', price: '$20' },
+      { name: 'Eyelash Tinting', price: '$25' },
+      { name: 'Forehead', price: '$15' },
+      { name: 'Chin', price: '$10' },
+      { name: 'Upper Lip', price: '$10' },
+      { name: 'Face', price: '$45' },
+      { name: 'Chest', price: '$40' },
+      { name: 'Back', price: '$45' },
+      { name: 'Under Arm', price: '$20' },
+      { name: 'Sideburns', price: '$20' },
+      { name: 'Upper Arm', price: '$30' },
+      { name: 'Lower Arm', price: '$30' },
+      { name: 'Full Arm', price: '$55 & up' },
+      { name: 'Upper Leg', price: '$40' },
+      { name: 'Lower Leg', price: '$40' },
+      { name: 'Full Leg', price: '$75 & up' },
+      { name: 'Bikini', price: '$45' },
+      { name: 'Brazilian', price: '$55' },
+      { name: 'Paraffin Wax', price: '$15' },
+    ],
   },
 ]
 

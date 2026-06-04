@@ -2,8 +2,8 @@ import { SERVICES } from '@/lib/constants'
 import SectionWrapper from '@/components/SectionWrapper'
 
 const SERVICE_ICONS: Record<string, string> = {
-  manicure: '💅',
-  pedicure: '🦶',
+  nails: '💅',
+  spa: '🦶',
   'nail-art': '✨',
   waxing: '🌿',
 }
