@@ -84,8 +84,16 @@ export default function Gallery() {
         </div>
       </SectionWrapper>
 
-      {/* Instagram embed script — loads after page is interactive */}
-      <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
+      {/* Instagram embed script — explicitly processes embeds after load */}
+      <Script
+        src="https://www.instagram.com/embed.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          if (typeof window !== 'undefined' && (window as any).instgrm) {
+            ;(window as any).instgrm.Embeds.process()
+          }
+        }}
+      />
     </section>
   )
 }
