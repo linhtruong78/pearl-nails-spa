@@ -4,18 +4,27 @@ import SectionWrapper from '@/components/SectionWrapper'
 
 const BEHOLD_FEED_URL = 'https://feeds.behold.so/tOoqvyj7p3LpzG0t7AWS'
 
+interface BeholdSize {
+  mediaUrl: string
+  width: number
+  height: number
+}
+
 interface BeholdPost {
   id: string
   permalink: string
   mediaType: string
   caption?: string
   sizes: {
-    medium?: { url: string; width: number; height: number }
-    large?: { url: string; width: number; height: number }
+    small?: BeholdSize
+    medium?: BeholdSize
+    large?: BeholdSize
+    full?: BeholdSize
   }
   children?: Array<{
     sizes: {
-      medium?: { url: string; width: number; height: number }
+      small?: BeholdSize
+      medium?: BeholdSize
     }
   }>
 }
@@ -65,9 +74,9 @@ export default async function Gallery() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
               {displayPosts.map((post, i) => {
                 const imgUrl =
-                  post.sizes?.large?.url ||
-                  post.sizes?.medium?.url ||
-                  post.children?.[0]?.sizes?.medium?.url
+                  post.sizes?.large?.mediaUrl ||
+                  post.sizes?.medium?.mediaUrl ||
+                  post.children?.[0]?.sizes?.medium?.mediaUrl
                 if (!imgUrl) return null
                 return (
                   <a
