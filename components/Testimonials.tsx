@@ -1,4 +1,5 @@
 import { TESTIMONIALS } from '@/lib/constants'
+import SectionWrapper from '@/components/SectionWrapper'
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -13,6 +14,7 @@ function StarRating({ rating }: { rating: number }) {
 export default function Testimonials() {
   return (
     <section className="py-20 md:py-28 bg-surface">
+      <SectionWrapper>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-primary font-medium text-sm tracking-[0.2em] uppercase mb-3">
@@ -22,7 +24,6 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t) => (
             <div key={t.name} className="bg-white rounded-2xl p-8 flex flex-col gap-4 shadow-sm">
@@ -38,6 +39,7 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
+      </SectionWrapper>
     </section>
   )
 }

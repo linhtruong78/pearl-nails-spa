@@ -1,8 +1,10 @@
 import { BUSINESS } from '@/lib/constants'
+import SectionWrapper from '@/components/SectionWrapper'
 
 export default function Booking() {
   return (
     <section id="booking" className="py-20 md:py-28 bg-white">
+      <SectionWrapper>
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-primary font-medium text-sm tracking-[0.2em] uppercase mb-3">
@@ -15,7 +17,6 @@ export default function Booking() {
             Book your appointment online — choose your service, pick a time, and we&apos;ll take care of the rest.
           </p>
         </div>
-
         {/* FRESHA EMBED — replace this div with the Fresha widget script once account is set up */}
         <div className="rounded-2xl border-2 border-dashed border-primary/30 bg-surface min-h-[300px] flex flex-col items-center justify-center gap-4 p-10 text-center">
           <span className="text-4xl">📅</span>
@@ -29,6 +30,7 @@ export default function Booking() {
           </p>
         </div>
       </div>
+      </SectionWrapper>
     </section>
   )
 }

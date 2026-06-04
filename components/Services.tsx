@@ -1,4 +1,5 @@
 import { SERVICES } from '@/lib/constants'
+import SectionWrapper from '@/components/SectionWrapper'
 
 const SERVICE_ICONS: Record<string, string> = {
   manicure: '💅',
@@ -10,6 +11,7 @@ const SERVICE_ICONS: Record<string, string> = {
 export default function Services() {
   return (
     <section id="services" className="py-20 md:py-28 bg-white">
+      <SectionWrapper>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-primary font-medium text-sm tracking-[0.2em] uppercase mb-3">
@@ -54,6 +56,7 @@ export default function Services() {
           </a>
         </div>
       </div>
+      </SectionWrapper>
     </section>
   )
 }
