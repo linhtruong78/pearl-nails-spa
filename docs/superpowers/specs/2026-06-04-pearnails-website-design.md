@@ -201,10 +201,10 @@ Each step requires explicit approval before implementation.
 
 ---
 
-## Open Questions
+## Decisions Log
 
-- [ ] Confirm hero tagline with salon owner
-- [ ] Confirm exact Fresha business URL/widget embed code
-- [ ] Confirm which testimonials to feature (3–4 reviews)
-- [ ] Confirm logo file (if available) or design a text logo
-- [ ] Confirm hero background image (provided by client or use stock)
+- [x] Hero tagline: *"Where Beauty Meets Precision"* — approved
+- [x] Logo: text-based logo for now (no image file)
+- [x] Hero/gallery images: scrape from [@pearl_nailsspa](https://www.instagram.com/pearl_nailsspa/) Instagram via oembed for development; client will supply hi-res photos later
+- [x] Booking platform: set up new **Fresha** account (free for businesses) — booking widget embed added once account is live; placeholder section used during development
+- [ ] Confirm which testimonials to feature (3–4 reviews from Google/Facebook)
